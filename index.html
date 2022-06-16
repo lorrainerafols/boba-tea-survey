@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Boba Tea Survey</title>
+  </head>
+  <body>
+    <div class="survey-container">
+      <header>
+        <h1 id="title">Boba Tea Survey</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve our services.
+        </p>
+      </header>
+      <hr />
+      <form id="survey-form">
+        <div class="user-details">
+          <div class="name-field">
+            <label id="name-label" for="name">What is your name?</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="email-field">
+            <label id="email-label" for="email">What is your email?</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+          <div class="number-field">
+            <label id="number-label" for="number">How old are you?</label>
+            <input
+              type="number"
+              id="number"
+              placeholder="Age"
+              min="13"
+              max="120"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="dropdown-container">
+          <p class="dropdown">How often do you order from us?</p>
+          <select id="dropdown" name="order-frequency" required>
+            <option disabled selected value>(Select one)</option>
+            <option value="daily">
+              Everyday! I am a certified boba addict!
+            </option>
+            <option value="weekly">Occasionally, once or twice a week</option>
+            <option value="rarely">I rarely crave it</option>
+          </select>
+        </div>
+        <div class="rating-container">
+          <fieldset required>
+            <legend>How would you rate the quality of our drinks?</legend>
+            <label for="rating" class="rating-poor">Poor </label
+            ><input
+              type="range"
+              name="rating"
+              id="rating"
+              min="0"
+              max="5"
+              step="1"
+              required
+            /><label for="rating" class="rating-best"> THE BEST!</label>
+          </fieldset>
+        </div>
+        <div class="recommendation-container">
+          <fieldset required>
+            <legend>Would you recommend us to a friend?</legend>
+            <label for="recommend-yes" class="recommendation-label"
+              ><input
+                type="radio"
+                name="recommendation"
+                id="recommend-yes"
+                value="recommend-yes"
+                checked
+              />
+              Definitely</label
+            >
+            <label for="recommend-no" class="recommendation-label"
+              ><input
+                type="radio"
+                name="recommendation"
+                id="recommend-no"
+                value="recommend-no"
+              />
+              Sorry, No</label
+            >
+            <label for="recommend-not-sure" class="recommendation-label"
+              ><input
+                type="radio"
+                name="recommendation"
+                id="recommend-not-sure"
+                value="recommend-not-sure"
+              />
+              Not sure</label
+            >
+          </fieldset>
+        </div>
+        <div class="improvements-container">
+          <fieldset required>
+            <legend>
+              What would you like to see improved? (Check all that apply)
+            </legend>
+            <label for="more-flavors" class="improvements-label"
+              ><input
+                type="checkbox"
+                name="improvements"
+                id="more-flavors"
+                value="more-flavors"
+                checked
+              />
+              More flavors</label
+            >
+            <label for="customer-service" class="improvements-label"
+              ><input
+                type="checkbox"
+                name="improvements"
+                id="customer-service"
+                value="customer-service"
+              />
+              Customer service</label
+            >
+            <label for="online-ordering" class="improvements-label"
+              ><input
+                type="checkbox"
+                name="improvements"
+                id="online-ordering"
+                value="online-ordering"
+              />
+              Online ordering</label
+            >
+          </fieldset>
+        </div>
+        <hr />
+        <p>Do you have any other comments or suggestions?</p>
+        <textarea
+          id="comments"
+          name="comments"
+          placeholder="Enter your message here..."
+        ></textarea>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
